@@ -16,12 +16,11 @@ const Home: NextPage = () => {
         <meta name="description" content="Кастомная разработка web сервисов" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
         <h1 className={styles.title}>.beTrue()</h1>
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>123</footer>
     </div>
   );
 };
