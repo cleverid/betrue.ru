@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>.beTrue()</h1>
       </main>
 
-      <footer className={styles.footer}>123</footer>
+      <footer className={styles.footer}>1</footer>
     </div>
   );
 };
