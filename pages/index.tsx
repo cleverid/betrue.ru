@@ -18,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>.beTrue()</h1>
+        <div className={styles.title_sub}>кастомная разработка</div>
       </main>
 
       <footer className={styles.footer}></footer>
