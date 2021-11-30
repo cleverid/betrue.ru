@@ -28,6 +28,7 @@ jobs:
           tags: cleverid/betrue.ru:latest
 
   deploy:
+    needs: build
     name: deploy
     runs-on: ubuntu-latest
     steps:
@@ -39,3 +40,15 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: ${{ secrets.DEPLOY_COMMAND }}
+
+  notify:
+    needs: deploy
+    name: notify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send success message
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: Deploy betrue.ru success
